@@ -555,7 +555,9 @@ function goTo(screenId) {
   document.querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
   document.getElementById(screenId).classList.add('active');
   if (screenId === 'map-screen' || screenId === 'sorpresa-player') { startGeo(); }
-  if (screenId === 'map-screen') 
+  if (screenId === 'map-screen') { setTimeout(function(){ initMap(); }, 100); }
+}
+
 var map = null;
 
 function switchView(view) {
