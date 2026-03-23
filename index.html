@@ -627,7 +627,6 @@ function initMap() {
 }
 
 renderPlaces(PLACES);
-}
 
 function renderPlaces(list) {
   var c = document.getElementById('places-list');
@@ -1214,7 +1213,7 @@ function checkProximitySorpresa() {
   if (dist <= PROXIMITY_RADIUS) {
     // Mostrar banner para esta parada
     var items = document.getElementById('proximity-items');
-    items.innerHTML = '<div class="proximity-item" onclick="closeProximity();goTo('sorpresa-player')">' +
+    items.innerHTML = '<div class="proximity-item" onclick="closeProximity();goTo(\'sorpresa-player\')">' +
       '<div class="proximity-item-info">' +
         '<div class="proximity-item-name">'+stop.place+'</div>' +
         '<div class="proximity-item-dist">¡Estás aquí! Toca para reproducir</div>' +
